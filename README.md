@@ -4,10 +4,9 @@ This template is designed to simplify installation and work with the Latex ecosy
 ## Getting started
 To start working with this template, you must have the following components installed on your system:
 1. Docker (or Docker Desktop for MacOS). You can check its presence with the following command
-   ```
-   $ docker --version
-   ```
-3. 
+```
+$ docker --version
+```
 
 ## Install
 
