@@ -1,0 +1,11 @@
+services:
+  latex:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/latex/src           # sources
+      - ./dist:/latex/dist         # target for PDF files
+    tty: true
+    stdin_open: true
+    
