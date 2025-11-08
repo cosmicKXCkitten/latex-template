@@ -1,1 +1,1 @@
-# latex-template
+# Latex Template
