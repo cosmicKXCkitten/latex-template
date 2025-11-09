@@ -4,7 +4,7 @@ WORKDIR /latex
 
 RUN tlmgr update --self
 
-RUN tlmgr install latexmk && \
+RUN tlmgr install latexmk import && \
     apt-get update && \
     apt-get install -y curl tar xz-utils && \
     rm -rf /var/lib/apt/lists/*
