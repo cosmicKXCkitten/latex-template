@@ -1,16 +1,33 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{blindtext}
+\documentclass[a4paper, 14pt, russian]{extreport}
+
+\input{src/styles/packages}
+
+% \input{styles/format}
 
 \title{Auto compile in Docker}
 \author{Konstantin Epishin}
 \date{\today}
 
 \begin{document}
+    % \include{components/title}
+    \maketitle
 
-\maketitle
+    % \renewcommand{\abstractname}{\normalfont\uppercase{Abstract name}}
 
-\section{Intro}
-\Blindtext
+    % \include{components/abstract}
+    
+    % \renewcommand{\contentsname}{\uppercase{Content name}}
+
+    % \tableofcontents
+
+    % \include{components/intro}
+
+    % begin content of document
+
+    \include{src/components/content/example}
+
+    % end content of document
+
+    % \include{components/conclusion}
 
 \end{document}
