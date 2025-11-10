@@ -3,6 +3,9 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+      args:
+        WATCHEXEC_ARCH_NAME: ${WATCHEXEC_ARCH_NAME}
+        WATCHEXEC_VERSION: ${WATCHEXEC_VERSION}
     volumes:
       - ./src:/latex/src           # sources
       - ./dist:/latex/dist         # target for PDF files
