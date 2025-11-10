@@ -32,7 +32,7 @@ Before you start working with a LaTex project, you need to run the LaTex compile
 ```
 $ make run
 ```
-Now you can create your own LaTex document structure or use a template, you will find the compilation result in the `/dist` directory.
+Now you can create your own LaTex document structure or use a template in `/src` directory. You will find the compilation result in the `/dist` directory.
 Once you are done with your work, stop monitoring changes and turn off the LaTex compiler using the following command:
 ```
 $ make stop
