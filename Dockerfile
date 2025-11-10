@@ -9,16 +9,19 @@ RUN tlmgr install latexmk import && \
     apt-get install -y curl tar xz-utils && \
     rm -rf /var/lib/apt/lists/*
 
-ENV ARCH=aarch64-unknown-linux-gnu
-ENV WATCHEXEC_VERSION=2.3.2
+ARG WATCHEXEC_ARCH_NAME
+ENV WATCHEXEC_ARCH_NAME=$WATCHEXEC_ARCH_NAME
 
-RUN curl -L https://github.com/watchexec/watchexec/releases/download/v${WATCHEXEC_VERSION}/watchexec-${WATCHEXEC_VERSION}-${ARCH}.tar.xz -o /tmp/watchexec.tar.xz
+ARG WATCHEXEC_VERSION
+ENV WATCHEXEC_VERSION=$WATCHEXEC_VERSION
+
+RUN curl -L https://github.com/watchexec/watchexec/releases/download/v${WATCHEXEC_VERSION}/watchexec-${WATCHEXEC_VERSION}-${WATCHEXEC_ARCH_NAME}.tar.xz -o /tmp/watchexec.tar.xz
 
 RUN tar -xJf /tmp/watchexec.tar.xz -C /tmp
 
-RUN mv /tmp/watchexec-${WATCHEXEC_VERSION}-${ARCH}/watchexec /usr/local/bin/watchexec
+RUN mv /tmp/watchexec-${WATCHEXEC_VERSION}-${WATCHEXEC_ARCH_NAME}/watchexec /usr/local/bin/watchexec
 
-RUN rm -rf /tmp/watchexec.tar.xz && rm -rf /tmp/watchexec-${WATCHEXEC_VERSION}-${ARCH}/
+RUN rm -rf /tmp/watchexec.tar.xz && rm -rf /tmp/watchexec-${WATCHEXEC_VERSION}-${WATCHEXEC_ARCH_NAME}/
    
 RUN chmod +x /usr/local/bin/watchexec
 
