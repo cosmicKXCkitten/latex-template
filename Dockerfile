@@ -10,14 +10,15 @@ RUN tlmgr install latexmk import && \
     rm -rf /var/lib/apt/lists/*
 
 ENV ARCH=aarch64-unknown-linux-gnu
+ENV WATCHEXEC_VERSION=2.3.2
 
-RUN curl -L https://github.com/watchexec/watchexec/releases/download/v2.3.2/watchexec-2.3.2-${ARCH}.tar.xz -o /tmp/watchexec.tar.xz
+RUN curl -L https://github.com/watchexec/watchexec/releases/download/v${WATCHEXEC_VERSION}/watchexec-${WATCHEXEC_VERSION}-${ARCH}.tar.xz -o /tmp/watchexec.tar.xz
 
 RUN tar -xJf /tmp/watchexec.tar.xz -C /tmp
 
-RUN mv /tmp/watchexec-2.3.2-${ARCH}/watchexec /usr/local/bin/watchexec
+RUN mv /tmp/watchexec-${WATCHEXEC_VERSION}-${ARCH}/watchexec /usr/local/bin/watchexec
 
-RUN rm -rf /tmp/watchexec.tar.xz && rm -rf /tmp/watchexec-2.3.2-${ARCH}/
+RUN rm -rf /tmp/watchexec.tar.xz && rm -rf /tmp/watchexec-${WATCHEXEC_VERSION}-${ARCH}/
    
 RUN chmod +x /usr/local/bin/watchexec
 
