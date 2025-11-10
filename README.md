@@ -23,7 +23,7 @@ GNU Make 3.81
 ## Install
 Install the repository using the `git clone` command via SSH:
 ```
-$ git clone git@github.com:cosmicKXCkitten/latex-template.git
+$ git clone git@github.com:cosmicKXCkitten/latex-template/tree/v1.0.0
 ```
 or you can simply download the zip archive through the GitHub interface, unzip it, and then open it in your code editor (VS Code is recommended).
 
