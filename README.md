@@ -1,4 +1,4 @@
-# Latex Template
+# Latex in Docker Template
 This template is designed to simplify installation and work with the Latex ecosystem across any platform and build, as well as to unify work on Latex documents for large teams.
 
 ## Getting started
